@@ -1,0 +1,6 @@
+#Rename to jdbc.properties and set corresponding db properties
+jdbc.driverClassName=<driver>
+jdbc.url=<url>
+jdbc.username=<username>
+jdbc.password=<password>
+hibernate.dialect=<dialect>

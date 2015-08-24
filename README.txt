@@ -10,4 +10,6 @@ mvn clean install
 
 Required Java 7 version.
 
-Files configuration.xml, dbContext.xml, jdbc.properties must be in same directory that jar archive.  
+Files configuration.xml, dbContext.xml, jdbc.properties must be in same directory that jar archive.
+
+Rename jdbc.properties-template to jdbc.properties and set corresponding db properties here. 
