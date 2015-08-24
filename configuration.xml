@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<delay>5</delay>
+	<tempDirectory>D:/JAVA/Tartus/temp</tempDirectory>
+	<defaultCurrencyId>1</defaultCurrencyId>
+	<forCurrencyId>3</forCurrencyId>
+	<!-- Specifies the available sources (vendors) of currency rate.
+	1 - Central bank of the Russian Federation -->
+	<sourceType>1</sourceType>
+	<currenciesList>
+		<currency>USD</currency>
+		<currency>EUR</currency>
+	</currenciesList>
+</configuration>

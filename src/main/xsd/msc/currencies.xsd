@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.0">
+	<xsd:element name="ValCurs" type="ValCursType" />
+	<xsd:complexType name="ValCursType">
+		<xsd:sequence>
+			<xsd:element name="Valute" type="ValuteType" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xsd:sequence>
+		
+		<xsd:attribute name="Date" type="xsd:string" />
+		<xsd:attribute name="name" type="xsd:string" />
+	</xsd:complexType>
+	
+	<xsd:complexType name="ValuteType">
+
+		<xsd:sequence>
+			<xsd:element name="NumCode" type="xsd:int"/>
+			<xsd:element name="CharCode" type="xsd:string"/>
+			<xsd:element name="Nominal" type="xsd:int"/>
+			<xsd:element name="Name" type="xsd:string"/>
+			<xsd:element name="Value" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="ID" type="xsd:string"/>
+	</xsd:complexType>
+
+</xsd:schema>
