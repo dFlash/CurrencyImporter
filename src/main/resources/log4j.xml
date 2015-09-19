@@ -10,33 +10,50 @@
 		</layout>
 	</appender>
 
+	<appender name="FILE" class="org.apache.log4j.FileAppender">
+
+		<param name="file" value="log/currency-import.log" />
+		<param name="Append" value="false" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{HH:mm:ss} [%t] %5p %c{1} - %m%n" />
+		</layout>
+	</appender>
+
 	<logger name="net.mpopov.ci">
 		<level value="info" />
+		<appender-ref ref="FILE" />
 	</logger>
 
 	<logger name="org.springframework.core">
 		<level value="error" />
+		<appender-ref ref="FILE" />
 	</logger>
 
 	<logger name="org.springframework.beans">
 		<level value="error" />
+		<appender-ref ref="FILE" />
 	</logger>
 
 	<logger name="org.springframework.context">
 		<level value="error" />
+		<appender-ref ref="FILE" />
 	</logger>
 
 	<logger name="org.springframework.http">
 		<level value="error" />
+		<appender-ref ref="FILE" />
 	</logger>
 
 	<logger name="org.springframework.web">
 		<level value="error" />
+		<appender-ref ref="FILE" />
 	</logger>
 
 	<root>
 		<level value="info" />
 		<appender-ref ref="console" />
+		<appender-ref ref="FILE" />
 	</root>
 
 </log4j:configuration>
