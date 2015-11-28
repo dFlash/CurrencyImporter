@@ -25,12 +25,19 @@
 				<!-- Cruise Public Schema -->
 				<value>net.mpopov.ci.cruise.model.CurrencyExchangeRate</value>
 				<value>net.mpopov.ci.cruise.model.Currency</value>
+				<value>net.mpopov.ci.cruise.model.Company</value>
+				<value>net.mpopov.ci.cruise.model.Cruise</value>
+				<value>net.mpopov.ci.cruise.model.CruiseDateRange</value>
+				<value>net.mpopov.ci.cruise.model.CruiseDateRangeMinPrice</value>
+				<value>net.mpopov.ci.cruise.model.Vessel</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
 				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
 			</props>
 		</property>
 	</bean>
@@ -40,5 +47,5 @@
 		p:sessionFactory-ref="sessionFactory">
 	</bean>
 	
-		<context:property-placeholder location="jdbc.properties"/>
+	<context:property-placeholder location="jdbc.properties"/>
 </beans>

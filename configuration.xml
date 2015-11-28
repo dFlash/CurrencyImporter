@@ -11,4 +11,7 @@
 		<currency>USD</currency>
 		<currency>EUR</currency>
 	</currenciesList>
+	<excludedCompanyIds>
+		<companyId>27</companyId> <!-- MSC -->
+	</excludedCompanyIds>
 </configuration>

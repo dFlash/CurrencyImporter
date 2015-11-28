@@ -17,16 +17,20 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for currenciesListType complex type.
+ * 
+ * 				Companies which have own currency rates.
+ * 			
+ * 
+ * <p>Java class for excludedCompanyIdsList complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="currenciesListType">
+ * &lt;complexType name="excludedCompanyIdsList">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="currency" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
+ *         &lt;element name="companyId" type="{http://www.w3.org/2001/XMLSchema}long" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,41 +40,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "currenciesListType", propOrder = {
-    "currency"
+@XmlType(name = "excludedCompanyIdsList", propOrder = {
+    "companyId"
 })
-public class CurrenciesListType {
+public class ExcludedCompanyIdsList {
 
-    @XmlElement(required = true)
-    protected List<String> currency;
+    @XmlElement(type = Long.class)
+    protected List<Long> companyId;
 
     /**
-     * Gets the value of the currency property.
+     * Gets the value of the companyId property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the currency property.
+     * This is why there is not a <CODE>set</CODE> method for the companyId property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getCurrency().add(newItem);
+     *    getCompanyId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link String }
+     * {@link Long }
      * 
      * 
      */
-    public List<String> getCurrency() {
-        if (currency == null) {
-            currency = new ArrayList<String>();
+    public List<Long> getCompanyId() {
+        if (companyId == null) {
+            companyId = new ArrayList<Long>();
         }
-        return this.currency;
+        return this.companyId;
     }
 
 }
