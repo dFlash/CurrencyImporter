@@ -28,9 +28,9 @@ public class CurrencyExchangeRateServiceImpl implements CurrencyExchangeRateServ
     }
 
     @Transactional
-    public CurrencyExchangeRate load(Long currencyExchangeRateId)
+    public CurrencyExchangeRate load(Long currencyId, Short sourceType)
     {
-        return currencyExchangeRateDAO.load(currencyExchangeRateId);
+        return currencyExchangeRateDAO.load(currencyId, sourceType);
     }
 
     @Transactional

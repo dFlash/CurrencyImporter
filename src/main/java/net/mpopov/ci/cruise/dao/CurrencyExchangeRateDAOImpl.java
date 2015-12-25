@@ -25,10 +25,18 @@ public class CurrencyExchangeRateDAOImpl implements CurrencyExchangeRateDAO
         sessionFactory.getCurrentSession().merge(currencyExchangeRate);
     }
 
-    public CurrencyExchangeRate load(Long currencyExchangeRateId)
+    public CurrencyExchangeRate load(Long currencyId, Short sourceType)
     {
-        return (CurrencyExchangeRate) sessionFactory.getCurrentSession().get(
-                CurrencyExchangeRate.class, currencyExchangeRateId);
+        String hql = " from CurrencyExchangeRate      "
+                + "    where currencyId = :currencyId "
+                + "      and sourceType = :cbrType    ";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        query.setParameter("currencyId", currencyId);
+        query.setParameter("cbrType", sourceType);
+        CurrencyExchangeRate currencyExchangeRate = (CurrencyExchangeRate) query
+                .uniqueResult();
+
+        return currencyExchangeRate;
     }
 
     @SuppressWarnings("unchecked")
@@ -42,4 +50,5 @@ public class CurrencyExchangeRateDAOImpl implements CurrencyExchangeRateDAO
 
         return list;
     }
+
 }
