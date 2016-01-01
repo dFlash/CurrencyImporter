@@ -30,6 +30,7 @@
 				<value>net.mpopov.ci.cruise.model.CruiseDateRange</value>
 				<value>net.mpopov.ci.cruise.model.CruiseDateRangeMinPrice</value>
 				<value>net.mpopov.ci.cruise.model.Vessel</value>
+				<value>net.mpopov.ci.cruise.model.CruisePriceInfo</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

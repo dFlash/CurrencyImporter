@@ -66,7 +66,7 @@ public class CruiseDateRangeMinPriceDAOImpl
     }
 
     @Override
-    public void removeByDataRange(Long cruiseDateRangeId)
+    public void removeByDateRange(Long cruiseDateRangeId)
     {
         String hql = "delete from CruiseDateRangeMinPrice cruiseDateRangeMinPrice   "
                 + " where cruiseDateRangeMinPrice.cruiseDateRange.cruiseDateRangeId "

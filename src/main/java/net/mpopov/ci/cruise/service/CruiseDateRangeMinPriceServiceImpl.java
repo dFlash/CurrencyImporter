@@ -1,10 +1,8 @@
 package net.mpopov.ci.cruise.service;
 
-//import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-//import java.util.Set;
 
 import net.mpopov.ci.common.CurrencyUtil;
 import net.mpopov.ci.cruise.dao.CruiseDateRangeMinPriceDAO;
@@ -56,7 +54,7 @@ public class CruiseDateRangeMinPriceServiceImpl
 
     private void removeForDateRange(Long cruiseDateRangeId)
     {
-        cruiseDateRangeMinPriceDAO.removeByDataRange(cruiseDateRangeId);
+        cruiseDateRangeMinPriceDAO.removeByDateRange(cruiseDateRangeId);
     }
 
     private void addNewRateForMinPrice(Long prevId,

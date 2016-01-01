@@ -16,6 +16,6 @@ public interface CruiseDateRangeMinPriceDAO
     public List<CruiseDateRangeMinPrice> listCbrMinPrices(
             List<Long> excludedCompanyIds);
 
-    public void removeByDataRange(Long cruiseDateRangeId);
+    public void removeByDateRange(Long cruiseDateRangeId);
 
 }
