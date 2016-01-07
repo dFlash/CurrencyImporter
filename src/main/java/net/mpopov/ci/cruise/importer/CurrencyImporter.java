@@ -12,8 +12,6 @@ import net.mpopov.ci.common.MSCIException;
 import net.mpopov.ci.configuration.Configuration;
 import net.mpopov.ci.cruise.model.Currency;
 import net.mpopov.ci.cruise.model.CurrencyExchangeRate;
-import net.mpopov.ci.cruise.service.CruiseDateRangeMinPriceService;
-import net.mpopov.ci.cruise.service.CruisePriceInfoService;
 import net.mpopov.ci.cruise.service.CurrencyExchangeRateService;
 import net.mpopov.ci.cruise.service.CurrencyService;
 import net.mpopov.ci.xml.model.ModelUtil;
@@ -56,9 +54,6 @@ public class CurrencyImporter extends BaseImporter
                 importCurrencyRate(valute);
             }
         }
-
-        recalculateMinPrices();
-        recalculatePriceInfo();
     }
 
     private void importCurrencyRate(ValuteType valute) throws MSCIException
@@ -129,33 +124,6 @@ public class CurrencyImporter extends BaseImporter
         String msg = String.format("Currency with code %s does not exist",
                 charCode);
         throw new MSCIException(msg);
-    }
-
-    private void recalculateMinPrices() throws MSCIException
-    {
-        // added base currency
-        currencyRates.put(Configuration.getInstance().getForCurrencyId(), 1.0);
-
-        CruiseDateRangeMinPriceService cruiseDateRangeMinPriceService = getBean(
-                "cruiseDateRangeMinPriceService");
-        List<Long> excludedCompanyIds = Configuration.getInstance()
-                .getExcludedCompanyIds().getCompanyId();
-        cruiseDateRangeMinPriceService.updateRates(currencyRates,
-                excludedCompanyIds);
-
-    }
-
-    private void recalculatePriceInfo() throws MSCIException
-    {
-        // added base currency
-        currencyRates.put(Configuration.getInstance().getForCurrencyId(), 1.0);
-
-        CruisePriceInfoService cruisePriceInfoService = getBean(
-                "cruisePriceInfoService");
-        List<Long> excludedCompanyIds = Configuration.getInstance()
-                .getExcludedCompanyIds().getCompanyId();
-        cruisePriceInfoService.updateRates(currencyRates, excludedCompanyIds);
-
     }
 
 }
