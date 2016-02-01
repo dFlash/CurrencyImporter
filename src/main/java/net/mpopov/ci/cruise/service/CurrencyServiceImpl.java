@@ -28,10 +28,10 @@ public class CurrencyServiceImpl implements CurrencyService
     }
 
     @Transactional
-	public Currency loadBaseId()
-	{
-    	 return currencyDAO.loadBaseId();
-	}
+    public Currency loadBaseId()
+    {
+        return currencyDAO.loadBaseId();
+    }
 
     @Transactional
     public Currency load(Long currencyId)

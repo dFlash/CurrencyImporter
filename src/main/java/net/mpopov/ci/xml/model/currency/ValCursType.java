@@ -5,7 +5,6 @@
 // Generated on: 2015.08.23 at 04:53:30 PM EEST 
 //
 
-
 package net.mpopov.ci.xml.model.currency;
 
 import java.util.ArrayList;
@@ -16,11 +15,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ValCursType complex type.
+ * <p>
+ * Java class for ValCursType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ValCursType">
@@ -39,15 +40,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ValCursType", propOrder = {
-    "valute"
-})
-public class ValCursType {
+@XmlType(name = "ValCursType", propOrder = { "valute" })
+public class ValCursType
+{
 
     @XmlElement(name = "Valute", required = true)
     protected List<ValuteType> valute;
+
     @XmlAttribute(name = "Date")
     protected String date;
+
     @XmlAttribute(name = "name")
     protected String name;
 
@@ -55,15 +57,16 @@ public class ValCursType {
      * Gets the value of the valute property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the valute property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the valute property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getValute().add(newItem);
+     * getValute().add(newItem);
      * </pre>
      * 
      * 
@@ -73,8 +76,10 @@ public class ValCursType {
      * 
      * 
      */
-    public List<ValuteType> getValute() {
-        if (valute == null) {
+    public List<ValuteType> getValute()
+    {
+        if (valute == null)
+        {
             valute = new ArrayList<ValuteType>();
         }
         return this.valute;
@@ -83,12 +88,11 @@ public class ValCursType {
     /**
      * Gets the value of the date property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getDate() {
+    public String getDate()
+    {
         return date;
     }
 
@@ -96,23 +100,22 @@ public class ValCursType {
      * Sets the value of the date property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
-    public void setDate(String value) {
+    public void setDate(String value)
+    {
         this.date = value;
     }
 
     /**
      * Gets the value of the name property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
@@ -120,11 +123,11 @@ public class ValCursType {
      * Sets the value of the name property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 

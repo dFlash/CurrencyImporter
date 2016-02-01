@@ -20,7 +20,7 @@ public class CurrencyExchangeRate
 {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+    @GeneratedValue(strategy = GenerationType.AUTO,
             generator = "currency_exchange_rate_currency_exchange_rate_id_seq")
     @SequenceGenerator(
             name = "currency_exchange_rate_currency_exchange_rate_id_seq",
@@ -40,9 +40,6 @@ public class CurrencyExchangeRate
     @Column(name = "rate_value")
     @NotNull
     private Double rateValue;
-
-    @Column(name = "show_site")
-    private Boolean showSite;
 
     @Column(name = "for_currency_id")
     private Long forCurrencyId;
@@ -91,16 +88,6 @@ public class CurrencyExchangeRate
         this.rateValue = rateValue;
     }
 
-    public Boolean getShowSite()
-    {
-        return showSite;
-    }
-
-    public void setShowSite(Boolean showSite)
-    {
-        this.showSite = showSite;
-    }
-
     public Long getForCurrencyId()
     {
         return forCurrencyId;
@@ -127,8 +114,8 @@ public class CurrencyExchangeRate
         return "CurrencyExchangeRate [currencyExchangeRateId="
                 + currencyExchangeRateId + ", dateTime=" + dateTime
                 + ", currencyId=" + currencyId + ", rateValue=" + rateValue
-                + ", showSite=" + showSite + ", forCurrencyId=" + forCurrencyId
-                + ", sourceType=" + sourceType + "]";
+                + ", forCurrencyId=" + forCurrencyId + ", sourceType="
+                + sourceType + "]";
     }
 
 }

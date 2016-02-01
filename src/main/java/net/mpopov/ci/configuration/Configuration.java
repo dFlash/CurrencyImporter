@@ -38,8 +38,7 @@ public class Configuration
     {
     }
 
-    public ConfigurationType getConfigurationTypeInstance()
-            throws MSCIException
+    public ConfigurationType getConfigurationTypeInstance() throws MSCIException
     {
         if (configurationType == null)
         {
@@ -53,7 +52,7 @@ public class Configuration
         InputStream inputStream = null;
         try
         {
-        	inputStream = new FileInputStream(CONFIGURATION_FILE_NAME);
+            inputStream = new FileInputStream(CONFIGURATION_FILE_NAME);
 
             JAXBContext jaxbContext = JAXBContext
                     .newInstance(ObjectFactory.class);
@@ -72,13 +71,14 @@ public class Configuration
                     CONFIGURATION_FILE_NAME);
             logger.error(message);
             throw new MSCIException(message, exception);
-        } catch (FileNotFoundException e) {
-            String message = String.format(
-                    "The file %s could not be found ",
+        }
+        catch (FileNotFoundException e)
+        {
+            String message = String.format("The file %s could not be found ",
                     CONFIGURATION_FILE_NAME);
             logger.error(message);
             throw new MSCIException(message);
-		}
+        }
         finally
         {
             if (inputStream != null)

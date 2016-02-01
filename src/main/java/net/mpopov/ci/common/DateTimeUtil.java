@@ -47,7 +47,8 @@ public class DateTimeUtil
 
     public static String getFormattedDate()
     {
-        return getFormattedDate(getCurrentDateTime(), DEFAULT_DATE_TIME_PATTERN);
+        return getFormattedDate(getCurrentDateTime(),
+                DEFAULT_DATE_TIME_PATTERN);
     }
 
     public static String getFormattedDate(Date date)

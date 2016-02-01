@@ -29,19 +29,21 @@ public class Currency
     @Column(name = "code")
     @Size(min = 3, max = 3)
     private String code;
-    
+
     @Column(name = "base")
     private Boolean base;
 
-    public Boolean getBase() {
-		return base;
-	}
+    public Boolean getBase()
+    {
+        return base;
+    }
 
-	public void setBase(Boolean base) {
-		this.base = base;
-	}
+    public void setBase(Boolean base)
+    {
+        this.base = base;
+    }
 
-	/**
+    /**
      * @return the currencyId
      */
     public Long getCurrencyId()

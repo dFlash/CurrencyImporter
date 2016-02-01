@@ -5,7 +5,6 @@
 // Generated on: 2015.11.26 at 10:02:47 PM EET 
 //
 
-
 package net.mpopov.ci.configuration;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for configurationType complex type.
+ * <p>
+ * Java class for configurationType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="configurationType">
@@ -40,37 +41,38 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "configurationType", propOrder = {
-    "delay",
-    "tempDirectory",
-    "defaultCurrencyId",
-    "forCurrencyId",
-    "sourceType",
-    "currenciesList",
-    "excludedCompanyIds"
-})
-public class ConfigurationType {
+@XmlType(name = "configurationType",
+        propOrder = { "delay", "tempDirectory", "defaultCurrencyId",
+                "forCurrencyId", "sourceType", "currenciesList",
+                "excludedCompanyIds" })
+public class ConfigurationType
+{
 
     @XmlElement(defaultValue = "10")
     protected Integer delay;
+
     @XmlElement(required = true)
     protected String tempDirectory;
+
     protected long defaultCurrencyId;
+
     protected long forCurrencyId;
+
     protected short sourceType;
+
     @XmlElement(required = true)
     protected CurrenciesListType currenciesList;
+
     protected ExcludedCompanyIdsList excludedCompanyIds;
 
     /**
      * Gets the value of the delay property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     * @return possible object is {@link Integer }
+     * 
      */
-    public Integer getDelay() {
+    public Integer getDelay()
+    {
         return delay;
     }
 
@@ -78,23 +80,22 @@ public class ConfigurationType {
      * Sets the value of the delay property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *            allowed object is {@link Integer }
+     * 
      */
-    public void setDelay(Integer value) {
+    public void setDelay(Integer value)
+    {
         this.delay = value;
     }
 
     /**
      * Gets the value of the tempDirectory property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getTempDirectory() {
+    public String getTempDirectory()
+    {
         return tempDirectory;
     }
 
@@ -102,11 +103,11 @@ public class ConfigurationType {
      * Sets the value of the tempDirectory property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
-    public void setTempDirectory(String value) {
+    public void setTempDirectory(String value)
+    {
         this.tempDirectory = value;
     }
 
@@ -114,7 +115,8 @@ public class ConfigurationType {
      * Gets the value of the defaultCurrencyId property.
      * 
      */
-    public long getDefaultCurrencyId() {
+    public long getDefaultCurrencyId()
+    {
         return defaultCurrencyId;
     }
 
@@ -122,7 +124,8 @@ public class ConfigurationType {
      * Sets the value of the defaultCurrencyId property.
      * 
      */
-    public void setDefaultCurrencyId(long value) {
+    public void setDefaultCurrencyId(long value)
+    {
         this.defaultCurrencyId = value;
     }
 
@@ -130,7 +133,8 @@ public class ConfigurationType {
      * Gets the value of the forCurrencyId property.
      * 
      */
-    public long getForCurrencyId() {
+    public long getForCurrencyId()
+    {
         return forCurrencyId;
     }
 
@@ -138,7 +142,8 @@ public class ConfigurationType {
      * Sets the value of the forCurrencyId property.
      * 
      */
-    public void setForCurrencyId(long value) {
+    public void setForCurrencyId(long value)
+    {
         this.forCurrencyId = value;
     }
 
@@ -146,7 +151,8 @@ public class ConfigurationType {
      * Gets the value of the sourceType property.
      * 
      */
-    public short getSourceType() {
+    public short getSourceType()
+    {
         return sourceType;
     }
 
@@ -154,19 +160,19 @@ public class ConfigurationType {
      * Sets the value of the sourceType property.
      * 
      */
-    public void setSourceType(short value) {
+    public void setSourceType(short value)
+    {
         this.sourceType = value;
     }
 
     /**
      * Gets the value of the currenciesList property.
      * 
-     * @return
-     *     possible object is
-     *     {@link CurrenciesListType }
-     *     
+     * @return possible object is {@link CurrenciesListType }
+     * 
      */
-    public CurrenciesListType getCurrenciesList() {
+    public CurrenciesListType getCurrenciesList()
+    {
         return currenciesList;
     }
 
@@ -174,23 +180,22 @@ public class ConfigurationType {
      * Sets the value of the currenciesList property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CurrenciesListType }
-     *     
+     *            allowed object is {@link CurrenciesListType }
+     * 
      */
-    public void setCurrenciesList(CurrenciesListType value) {
+    public void setCurrenciesList(CurrenciesListType value)
+    {
         this.currenciesList = value;
     }
 
     /**
      * Gets the value of the excludedCompanyIds property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ExcludedCompanyIdsList }
-     *     
+     * @return possible object is {@link ExcludedCompanyIdsList }
+     * 
      */
-    public ExcludedCompanyIdsList getExcludedCompanyIds() {
+    public ExcludedCompanyIdsList getExcludedCompanyIds()
+    {
         return excludedCompanyIds;
     }
 
@@ -198,11 +203,11 @@ public class ConfigurationType {
      * Sets the value of the excludedCompanyIds property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ExcludedCompanyIdsList }
-     *     
+     *            allowed object is {@link ExcludedCompanyIdsList }
+     * 
      */
-    public void setExcludedCompanyIds(ExcludedCompanyIdsList value) {
+    public void setExcludedCompanyIds(ExcludedCompanyIdsList value)
+    {
         this.excludedCompanyIds = value;
     }
 

@@ -15,6 +15,6 @@ public interface CurrencyService
 
     public List<Currency> list();
 
-	public Currency loadBaseId();
+    public Currency loadBaseId();
 
 }

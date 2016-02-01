@@ -5,7 +5,6 @@
 // Generated on: 2015.08.23 at 04:53:30 PM EEST 
 //
 
-
 package net.mpopov.ci.xml.model.currency;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ValuteType complex type.
+ * <p>
+ * Java class for ValuteType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ValuteType">
@@ -40,25 +41,26 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ValuteType", propOrder = {
-    "numCode",
-    "charCode",
-    "nominal",
-    "name",
-    "value"
-})
-public class ValuteType {
+@XmlType(name = "ValuteType",
+        propOrder = { "numCode", "charCode", "nominal", "name", "value" })
+public class ValuteType
+{
 
     @XmlElement(name = "NumCode")
     protected int numCode;
+
     @XmlElement(name = "CharCode", required = true)
     protected String charCode;
+
     @XmlElement(name = "Nominal")
     protected int nominal;
+
     @XmlElement(name = "Name", required = true)
     protected String name;
+
     @XmlElement(name = "Value", required = true)
     protected String value;
+
     @XmlAttribute(name = "ID")
     protected String id;
 
@@ -66,7 +68,8 @@ public class ValuteType {
      * Gets the value of the numCode property.
      * 
      */
-    public int getNumCode() {
+    public int getNumCode()
+    {
         return numCode;
     }
 
@@ -74,19 +77,19 @@ public class ValuteType {
      * Sets the value of the numCode property.
      * 
      */
-    public void setNumCode(int value) {
+    public void setNumCode(int value)
+    {
         this.numCode = value;
     }
 
     /**
      * Gets the value of the charCode property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getCharCode() {
+    public String getCharCode()
+    {
         return charCode;
     }
 
@@ -94,11 +97,11 @@ public class ValuteType {
      * Sets the value of the charCode property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
-    public void setCharCode(String value) {
+    public void setCharCode(String value)
+    {
         this.charCode = value;
     }
 
@@ -106,7 +109,8 @@ public class ValuteType {
      * Gets the value of the nominal property.
      * 
      */
-    public int getNominal() {
+    public int getNominal()
+    {
         return nominal;
     }
 
@@ -114,19 +118,19 @@ public class ValuteType {
      * Sets the value of the nominal property.
      * 
      */
-    public void setNominal(int value) {
+    public void setNominal(int value)
+    {
         this.nominal = value;
     }
 
     /**
      * Gets the value of the name property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
@@ -134,23 +138,22 @@ public class ValuteType {
      * Sets the value of the name property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
-    public void setName(String value) {
+    public void setName(String value)
+    {
         this.name = value;
     }
 
     /**
      * Gets the value of the value property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getValue() {
+    public String getValue()
+    {
         return value;
     }
 
@@ -158,23 +161,22 @@ public class ValuteType {
      * Sets the value of the value property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
-    public void setValue(String value) {
+    public void setValue(String value)
+    {
         this.value = value;
     }
 
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
-    public String getID() {
+    public String getID()
+    {
         return id;
     }
 
@@ -182,11 +184,11 @@ public class ValuteType {
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
-    public void setID(String value) {
+    public void setID(String value)
+    {
         this.id = value;
     }
 

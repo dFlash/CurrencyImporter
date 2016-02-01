@@ -27,12 +27,12 @@ public class CurrencyDAOImpl implements CurrencyDAO
 
     public Currency load(Long currencyId)
     {
-        return (Currency) sessionFactory.getCurrentSession().get(
-                Currency.class, currencyId);
+        return (Currency) sessionFactory.getCurrentSession().get(Currency.class,
+                currencyId);
     }
 
     @SuppressWarnings("unchecked")
-	public Currency loadBaseId()
+    public Currency loadBaseId()
     {
         String hql = "from Currency currency where currency.base = true";
 
@@ -40,8 +40,9 @@ public class CurrencyDAOImpl implements CurrencyDAO
 
         List<Currency> list = query.list();
 
-        if(list.isEmpty()) return null;
-        
+        if (list.isEmpty())
+            return null;
+
         return list.get(0);
     }
 

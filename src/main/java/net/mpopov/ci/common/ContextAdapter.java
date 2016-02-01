@@ -4,8 +4,7 @@ import org.apache.log4j.Logger;
 
 public abstract class ContextAdapter
 {
-    private static final Logger logger = Logger
-            .getLogger(ContextAdapter.class);
+    private static final Logger logger = Logger.getLogger(ContextAdapter.class);
 
     public void process() throws MSCIException
     {

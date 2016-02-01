@@ -58,7 +58,6 @@ public class MainImporter
         }
 
         logger.info("Import is finished.");
-
     }
 
 }

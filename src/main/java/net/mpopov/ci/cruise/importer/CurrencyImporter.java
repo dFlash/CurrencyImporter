@@ -66,33 +66,23 @@ public class CurrencyImporter extends BaseImporter
         String charCode = valute.getCharCode();
 
         long currencyId = getCurrencyId(currencies, charCode);
-        double rateValue;
         try
         {
+            double rateValue;
+
             rateValue = CurrencyUtil.getCurrencyRateValue(valute.getValue());
+
             rateValue /= valute.getNominal();
-        }
-        catch (ParseException e)
-        {
-            throw new RuntimeException(e);
-        }
 
-        currencyRates.put(currencyId, rateValue);
+            currencyRates.put(currencyId, rateValue);
 
-        CurrencyExchangeRate currencyExchangeRate = currencyExchangeRateService
-                .load(currencyId, Configuration.getInstance().getSourceType());
-
-        if (currencyExchangeRate == null)
-        {
-            currencyExchangeRate = getCurrencyExchangeRate(currencyId,
+            CurrencyExchangeRate currencyExchangeRate = getCurrencyExchangeRate(currencyId,
                     rateValue);
             currencyExchangeRateService.add(currencyExchangeRate);
         }
-        else
+        catch (ParseException e)
         {
-            currencyExchangeRate.setDateTime(DateTimeUtil.getCurrentDateTime());
-            currencyExchangeRate.setRateValue(rateValue);
-            currencyExchangeRateService.save(currencyExchangeRate);
+            throw new MSCIException("Exchange rate is not valid.", e);
         }
     }
 
@@ -105,7 +95,6 @@ public class CurrencyImporter extends BaseImporter
         currencyExchangeRate.setForCurrencyId(
                 Configuration.getInstance().getForCurrencyId());
         currencyExchangeRate.setRateValue(rateValue);
-        currencyExchangeRate.setShowSite(Boolean.FALSE);
         currencyExchangeRate
                 .setSourceType(Configuration.getInstance().getSourceType());
         return currencyExchangeRate;

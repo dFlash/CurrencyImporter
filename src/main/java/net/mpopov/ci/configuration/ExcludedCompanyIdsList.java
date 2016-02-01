@@ -5,7 +5,6 @@
 // Generated on: 2015.11.26 at 10:02:47 PM EET 
 //
 
-
 package net.mpopov.ci.configuration;
 
 import java.util.ArrayList;
@@ -15,15 +14,17 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
  * 
- * 				Companies which have own currency rates.
- * 			
+ * Companies which have own currency rates.
  * 
- * <p>Java class for excludedCompanyIdsList complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * Java class for excludedCompanyIdsList complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="excludedCompanyIdsList">
@@ -40,10 +41,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "excludedCompanyIdsList", propOrder = {
-    "companyId"
-})
-public class ExcludedCompanyIdsList {
+@XmlType(name = "excludedCompanyIdsList", propOrder = { "companyId" })
+public class ExcludedCompanyIdsList
+{
 
     @XmlElement(type = Long.class)
     protected List<Long> companyId;
@@ -52,26 +52,28 @@ public class ExcludedCompanyIdsList {
      * Gets the value of the companyId property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the companyId property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the companyId property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getCompanyId().add(newItem);
+     * getCompanyId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Long }
+     * Objects of the following type(s) are allowed in the list {@link Long }
      * 
      * 
      */
-    public List<Long> getCompanyId() {
-        if (companyId == null) {
+    public List<Long> getCompanyId()
+    {
+        if (companyId == null)
+        {
             companyId = new ArrayList<Long>();
         }
         return this.companyId;

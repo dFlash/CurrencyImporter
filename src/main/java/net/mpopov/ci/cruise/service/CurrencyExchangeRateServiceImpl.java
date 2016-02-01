@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service("currencyExchangeRateService")
-public class CurrencyExchangeRateServiceImpl implements CurrencyExchangeRateService
+public class CurrencyExchangeRateServiceImpl
+        implements CurrencyExchangeRateService
 {
     @Autowired
     private CurrencyExchangeRateDAO currencyExchangeRateDAO;
@@ -28,21 +29,15 @@ public class CurrencyExchangeRateServiceImpl implements CurrencyExchangeRateServ
     }
 
     @Transactional
-    public CurrencyExchangeRate load(Long currencyId, Short sourceType)
-    {
-        return currencyExchangeRateDAO.load(currencyId, sourceType);
-    }
-
-    @Transactional
     public List<CurrencyExchangeRate> list()
     {
         return currencyExchangeRateDAO.list();
     }
 
-	@Override
-	public String toString() {
-		return "CurrencyExchangeRateServiceImpl [for test]";
-	}
-    
+    @Override
+    public String toString()
+    {
+        return "CurrencyExchangeRateServiceImpl [for test]";
+    }
 
 }

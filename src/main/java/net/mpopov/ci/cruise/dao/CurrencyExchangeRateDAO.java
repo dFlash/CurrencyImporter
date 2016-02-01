@@ -11,8 +11,6 @@ public interface CurrencyExchangeRateDAO
 
     public void save(CurrencyExchangeRate currencyExchangeRate);
 
-    public CurrencyExchangeRate load(Long currencyId, Short sourceType);
-
     public List<CurrencyExchangeRate> list();
 
 }
